@@ -5,7 +5,6 @@ ruby '2.5.0'
 
 gem 'rails', '~> 5.2.0'
 
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
@@ -19,6 +18,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
