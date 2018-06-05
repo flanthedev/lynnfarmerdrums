@@ -16,4 +16,5 @@ website for musician Lynn Farmer
 
 * Deployment instructions
 
-* ...
+* To Do
+  add shim
