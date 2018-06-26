@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'instagram', '~> 1.1', '>= 1.1.6'
 gem 'passenger', '~> 5.2', '>= 5.2.3'
+gem 'devise', '~> 4.4', '>= 4.4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
