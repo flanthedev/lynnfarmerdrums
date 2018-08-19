@@ -10,11 +10,6 @@ $(document).ready(function() {
 		}
 	});
 
-
-
-	// Fancybox
-	$('.work-box').fancybox();
-
 	// Page Scroll
 	var sections = $('section')
 		nav = $('nav[role="navigation"]');

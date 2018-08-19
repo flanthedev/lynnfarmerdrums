@@ -1,0 +1,43 @@
+<%= form_with(model: gig, local: true) do |form| %>
+  <% if gig.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gig.errors.count, "error") %> prohibited this gig from being saved:</h2>
+
+      <ul>
+      <% gig.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control', required: 'true' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :date %>
+    <div class='input-group date' id='datetimepicker1'>
+      <%= form.text_field :date, class: 'form-control', required: 'true' %>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker1').datetimepicker();
+      });
+  </script>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-success" %>
+  </div>
+<% end %>

@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   layout 'admin'
+
+  before_action :authenticate_admin!, except: 'pages#show'
   
   protected
 
