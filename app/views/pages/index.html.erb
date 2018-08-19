@@ -1,10 +1,32 @@
-<section class="banner" role="banner"> 
-  <%= render 'layouts/navigation' %>
-  <%= render 'layouts/banner' %>
-</section>
+<p id="notice"><%= notice %></p>
 
-<%= render 'layouts/about' %>
+<h1>Pages</h1>
+<hr>
+<table class="table-striped">
 
-<%= render 'layouts/media' %>
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td>
+          <strong>(<%= page.status %>)</strong>
+        </td>
+        <td>
+          <%= page.title %>
+        </td>
+        <td class="text-right">
+          <%= link_to 'Edit', edit_page_path(page), class: 'text-success' %>
+          <%= link_to 'Delete', page, method: :delete, class: 'text-danger',
+                data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding:1% 10% 5% 10%;">
+          <%= page.body %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= render 'layouts/footer' %>
+<br>
+

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
 //= require activestorage

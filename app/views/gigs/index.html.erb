@@ -10,11 +10,11 @@
         <td><%= gig.name %></td>
         <td><%= gig.formatted_date %></td>
         <td class="text-right">
-          <%= link_to 'View', gig, class: 'btn btn-primary' %>
-          <%= link_to 'Edit', edit_gig_path(gig), class: 'btn btn-success' %>
+          <%= link_to 'View', gig, class: 'text-primary' %>
+          <%= link_to 'Edit', edit_gig_path(gig), class: 'text-success' %>
           <%= link_to 'Delete', gig, 
                       method: :delete,
-                      class: 'btn btn-danger',
+                      class: 'text-danger',
                       data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>

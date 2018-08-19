@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   get 'edit', to: 'pages#edit'
   resources :gigs
+  resources :pages, except: :show
   root 'pages#index'
 end

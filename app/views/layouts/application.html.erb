@@ -19,7 +19,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="banner" role="banner"> 
+      <%= render 'layouts/navigation' %>
+      <%= render 'layouts/banner' %>
+    </section>
+
+    <%= render 'layouts/about' %>
+
+    <%= render 'layouts/media' %>
+
+    <%= render 'layouts/footer' %>
   </body>
 </html>
 

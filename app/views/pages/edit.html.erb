@@ -1,3 +1,5 @@
-<p>Admin</p>
+<h1>Editing Page</h1>
 
-<%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+<%= render 'form', page: @page %>
+
+<br><%= link_to 'Back', pages_path %>
