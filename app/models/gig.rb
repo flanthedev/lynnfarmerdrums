@@ -7,6 +7,10 @@ class Gig < ApplicationRecord
     DateTime.strptime(date, '%m/%d/%Y %l:%M %p')
   end
 
+  def formatted_date
+    date_time.strftime('%B %e, %Y')
+  end
+
   private
   
     def self.yesterday

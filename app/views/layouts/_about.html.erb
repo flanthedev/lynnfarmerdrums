@@ -18,7 +18,7 @@
           <ul>
             <% @gigs.each do |gig| %>
               <li>
-                <strong><%= gig.name %></strong> <i><%= gig.date_time.strftime('%B %e, %Y') %></i>
+                <strong><%= gig.name %></strong> <i><%= gig.formatted_date %></i>
                 <br><small><%= gig.description %></small>
                 <hr>
               </li>
