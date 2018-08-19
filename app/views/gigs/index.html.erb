@@ -1,13 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Gigs</h1>
-
-<table class='table-striped'>
-
+<table class="table table-striped">
   <tbody>
     <% @gigs.each do |gig| %>
       <tr>
-        <td><%= gig.name %></td>
+        <td><strong><%= gig.name %></strong></td>
         <td><%= gig.formatted_date %></td>
         <td class="text-right">
           <%= link_to 'View', gig, class: 'text-primary' %>
@@ -19,12 +16,8 @@
         </td>
       </tr>
       <tr>
-        <td colspan='3' style="padding-bottom:30px;"><%= gig.description %></td>
+        <td colspan="3" style="padding:1% 10% 5% 10%;"><%= simple_format gig.description %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Gig', new_gig_path %>

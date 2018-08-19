@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pages</h1>
-<hr>
-<table class="table-striped">
-
+<table class="table table-striped">
   <tbody>
     <% @pages.each do |page| %>
       <tr>
@@ -15,18 +12,17 @@
         </td>
         <td class="text-right">
           <%= link_to 'Edit', edit_page_path(page), class: 'text-success' %>
-          <%= link_to 'Delete', page, method: :delete, class: 'text-danger',
-                data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', page, 
+              method: :delete, 
+              class: 'text-danger',
+              data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
       <tr>
         <td colspan="3" style="padding:1% 10% 5% 10%;">
-          <%= page.body %>
+          <%= simple_format page.body %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-

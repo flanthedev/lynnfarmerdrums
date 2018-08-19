@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-  before_action :authenticate_admin!, except: :show
+  skip_before_action :authenticate_admin!, only: :home
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def home
     @gigs = Gig.future
-    @page = Page.first
-    render layout: 'application'
+    @pages = Page.active
+    render 'layouts/application', layout: false
   end
 
   def index

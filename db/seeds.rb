@@ -29,4 +29,8 @@ Page.where(
   title: "Lynn Farmer, performer and educator.",
   body: "Lynn Farmer is the longtime drummer with Meat Beat Manifesto and currently playing with Mojave Phone Booth and The Hip Spanic All Stars. He gives drum lessons in Oakland, CA.",
 ).first_or_create
+Page.where(
+  title: "A second entry.",
+  body: "... with more text.",
+).first_or_create
 puts "create a Page. #{Page.all.count} total Page(s)."

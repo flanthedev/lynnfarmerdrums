@@ -4,4 +4,5 @@ class Page < ApplicationRecord
     inactive: 0,
     active: 1      
   }
+  scope :active, -> { where(status: "active") }
 end
