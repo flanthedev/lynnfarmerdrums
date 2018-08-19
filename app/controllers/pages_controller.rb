@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @gigs = Gig.future
+    @page = Page.first
     render layout: 'application'
   end
 
