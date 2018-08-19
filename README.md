@@ -1,7 +1,7 @@
 website for musician Lynn Farmer
 
 * Ruby, Rails version
-  2.5.0, 5.2.0
+  2.5.1, 5.2.0
 * System dependencies
 
 * Configuration

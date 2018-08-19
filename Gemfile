@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'rails', '~> 5.2.0'
+gem 'sprockets', '~>3.7.2'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'sass-rails', '~> 5.0'
