@@ -9,4 +9,14 @@ Admin.create(
   email: 'flanthedev@gmail.com',
   password: 'placeholder'
 )
-puts Admin.all.count
+puts "creates #{Admin.all.count} admins"
+
+10.times do |i|
+  d = DateTime.now + i.day + i.hours
+  Gig.create(
+    name: "Gig #{i}",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: d.strftime('%m/%d/%Y %l:%M %p')
+  )
+end
+puts "created #{Gig.all.count} Gigs"

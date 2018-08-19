@@ -14,12 +14,15 @@
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="intro-content">
-          <h4>my expertise</h4>
+          <h4>gigs</h4>
           <ul>
-            <li>bullet</li>
-            <li>points</li>
-            <li>go</li>
-            <li>here</li>
+            <% @gigs.each do |gig| %>
+              <li>
+                <strong><%= gig.name %></strong> <i><%= gig.date_time.strftime('%B %e, %Y') %></i>
+                <br><small><%= gig.description %></small>
+                <hr>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>
